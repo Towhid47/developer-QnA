@@ -17,7 +17,7 @@ const Navigationbar = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <NavLink to="/home" className='fw-semibold text-light nav-item ms-5'>Home</NavLink>
+                            <NavLink to="/home" className={`fw-semibold text-light nav-item ms-5  ${({isActive})=> isActive? "active" : undefined}`}>Home</NavLink>
                             <NavLink to="/topics" className='fw-semibold text-light nav-item ms-5'>Topics</NavLink>
                             <NavLink to="/statistics" className='fw-semibold text-light nav-item ms-5'>Statistics</NavLink>
                             <NavLink to="/blog" className='fw-semibold text-light nav-item ms-5'>Blog</NavLink>

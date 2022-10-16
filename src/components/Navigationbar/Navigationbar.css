@@ -11,8 +11,10 @@
 }
 
 .nav-item:hover{
-    background-color: cadetblue;
-    border-radius: 8px;
-    padding: 3%;
+    border-bottom: 3px solid aqua;
 
+}
+
+.active{
+    border-bottom: 3px solid aqua;
 }
