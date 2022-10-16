@@ -5,6 +5,7 @@ import './Navigationbar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 
 
 const Navigationbar = () => {
@@ -16,10 +17,10 @@ const Navigationbar = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="/home" className='fw-semibold text-light'>Home</Nav.Link>
-                            <Nav.Link href="/topics" className='fw-semibold text-light'>Topics</Nav.Link>
-                            <Nav.Link href="/statistics" className='fw-semibold text-light'>Statistics</Nav.Link>
-                            <Nav.Link href="/blog" className='fw-semibold text-light'>Blog</Nav.Link>
+                            <NavLink to="/home" className='fw-semibold text-light nav-item ms-5'>Home</NavLink>
+                            <NavLink to="/topics" className='fw-semibold text-light nav-item ms-5'>Topics</NavLink>
+                            <NavLink to="/statistics" className='fw-semibold text-light nav-item ms-5'>Statistics</NavLink>
+                            <NavLink to="/blog" className='fw-semibold text-light nav-item ms-5'>Blog</NavLink>
                             
                         </Nav>
                         </Navbar.Collapse>

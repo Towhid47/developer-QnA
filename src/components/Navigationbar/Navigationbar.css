@@ -3,3 +3,16 @@
 .web-title{
     font-family: 'Audiowide', cursive;
 }
+
+.nav-item{
+    text-decoration: none;
+    margin-left: 5%;
+
+}
+
+.nav-item:hover{
+    background-color: cadetblue;
+    border-radius: 8px;
+    padding: 3%;
+
+}
