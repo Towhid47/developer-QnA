@@ -3,6 +3,7 @@ import React from 'react';
 //import Card Component from React BootStrap
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Topic = (props) => {
 
@@ -16,8 +17,8 @@ const Topic = (props) => {
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
                          <p>Total Number of Qestions : <span className='fw-semibold'> {total} </span> </p> 
-                        </Card.Text>
-                        <Button variant="primary">Start {name} Quiz</Button>
+                        </Card.Text> 
+                       <Link to = {`../quiz/${id}`}><Button variant="primary">Start {name} Quiz</Button> </Link>
                     </Card.Body>
                     </Card>
         </div>
