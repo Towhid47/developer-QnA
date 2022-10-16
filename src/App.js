@@ -1,11 +1,10 @@
-import { Button } from 'react-bootstrap';
 import './App.css';
+import Root from './layouts/Root';
 
 function App() {
   return (
     <div className="App">
-          <h1>Hello Developer</h1>
-          <Button>Be Strong</Button>
+          <Root></Root>
     </div>
   );
 }
