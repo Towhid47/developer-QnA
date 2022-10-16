@@ -11,10 +11,22 @@
 }
 
 .nav-item:hover{
-    border-bottom: 3px solid aqua;
+    border-bottom: 3px solid rgb(0, 255, 255);
 
 }
 
 .active{
     border-bottom: 3px solid aqua;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .nav-item:hover{
+        background-color: rgb(4, 90, 121);
+    
+    }
+    
+    .active{
+        background-color: rgb(0, 78, 78);
+    }
 }
