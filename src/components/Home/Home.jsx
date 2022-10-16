@@ -2,8 +2,8 @@ import React from 'react';
 
 //import Lottie Animation
 import Exam from "../../Exam.json";
-
 import Lottie from "lottie-react";
+//////////////////////////////////
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
