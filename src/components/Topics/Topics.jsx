@@ -9,7 +9,8 @@ const Topics = () => {
     return (
         <div className='d-lg-flex justify-content-between mt-5 container'>
             {  
-               topics.map(topic => <Topic></Topic> ) 
+               topics.map(topic => <Topic key={topic.id}
+                                          topic={topic}></Topic> ) 
             }      
         </div>
     );

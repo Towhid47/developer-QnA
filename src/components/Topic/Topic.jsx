@@ -4,18 +4,20 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const Topic = () => {
+const Topic = (props) => {
+
+    const {id, name , logo , total} = props.topic;
+    console.log(props.topic);
     return (
         <div>
-              <Card style={{ width: '18rem' }} className="my-5">
-                    <Card.Img variant="top" src="holder.js/100px180" />
+              <Card style={{ width: '18rem' }} className="my-5 bg-black ">
+                    <Card.Img variant="dark" src={`${logo}`}/>
                     <Card.Body className='bg-dark'>
-                        <Card.Title>Card Title</Card.Title>
+                        <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                         <p>Total Number of Qestions : <span className='fw-semibold'> {total} </span> </p> 
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary">Start {name} Quiz</Button>
                     </Card.Body>
                     </Card>
         </div>
