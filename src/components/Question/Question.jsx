@@ -8,10 +8,10 @@ const Question = (props) => {
 
      const optionClicked = (option) =>{
             if(option === correctAnswer){
-              return  toast("Correct Answer");
+              return  toast.success("Correct Answer");
             }
             else{
-              return  toast("Wrong Answer");
+              return  toast.error("Wrong Answer");
             }
       }
 
