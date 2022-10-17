@@ -1,13 +1,19 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Question from '../Question/Question';
 
 const Quiz = () => {
     
+   const loadDetails = useLoaderData();
+    const details = loadDetails.data.questions;
 
     return (
-        <div>
-            <h3 className='my-auto'>Quiz Topic : </h3>
-            <div className='container border border-info my-5 text-start'>
-                <h5>Question:</h5>
+        <div className='my-5'>
+            <h3>Quiz Topic : {loadDetails.data.name} </h3>
+            <div className='container my-5 text-center'>
+                 {
+                    details.map(detail => <Question detail={detail}></Question>)
+                 }
             </div>
         </div>
     );
