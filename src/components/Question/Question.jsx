@@ -1,5 +1,6 @@
 import React from 'react';
-import { Toast } from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Question.css' ;
 
 const Question = (props) => {
@@ -7,10 +8,10 @@ const Question = (props) => {
 
      const optionClicked = (option) =>{
             if(option === correctAnswer){
-               alert("Correct Answer");
+              return  toast("Correct Answer");
             }
             else{
-                alert("Wrong Answer");
+              return  toast("Wrong Answer");
             }
       }
 
@@ -25,10 +26,11 @@ const Question = (props) => {
                      {
                         options.map(option => {
                           return <>
-                                <div onClick={ () => optionClicked(option) }  className='text-center border border-1 p-4 m-5 rounded-pill fs-4 option-select'>
-                                   <div >{option}</div>
+                                <div className='text-center border border-1 p-4 m-5 rounded-pill fs-4 option-select'>
+                                   <div onClick={ () => optionClicked(option) } >{option}</div>
+                                   <ToastContainer></ToastContainer>
                                 </div>    
-                          
+                               
                           </>;
                         })
                     
