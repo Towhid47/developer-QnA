@@ -1,9 +1,19 @@
 import React from 'react';
+import { Toast } from 'react-bootstrap';
 import './Question.css' ;
 
 const Question = (props) => {
-    
-     const {options, id , question , correctAnswer }=props.detail;
+     const {options, question , correctAnswer }=props.detail;
+
+     const optionClicked = (option) =>{
+            if(option === correctAnswer){
+               alert("Correct Answer");
+            }
+            else{
+                alert("Wrong Answer");
+            }
+      }
+
      
     return (
         <div>
@@ -15,8 +25,8 @@ const Question = (props) => {
                      {
                         options.map(option => {
                           return <>
-                                <div className='text-center border border-1 p-4 m-5 rounded-pill fs-4 option-select'>
-                                   <p >{option}</p>
+                                <div onClick={ () => optionClicked(option) }  className='text-center border border-1 p-4 m-5 rounded-pill fs-4 option-select'>
+                                   <div >{option}</div>
                                 </div>    
                           
                           </>;

@@ -1,7 +1,8 @@
 .question-container{
-    background-color: rgba(169, 169, 169, 0.16);
+    background-color: rgba(48, 48, 48, 0.16);
 }
 
 .option-select:hover{
     background-color: rgba(0, 76, 255, 0.3);
+    cursor: pointer;
 }
