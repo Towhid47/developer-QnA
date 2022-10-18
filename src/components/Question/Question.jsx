@@ -3,9 +3,14 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Question.css' ;
 
+/////Hero Eye Icon import
+
+ 
 const Question = (props) => {
      const {options, question , correctAnswer }=props.detail;
 
+
+     ////// The Purpose of optionClicked() Function is to display a Toast while user click the specific option.
      const optionClicked = (option) =>{
             if(option === correctAnswer){
               return  toast.success("Correct Answer");
@@ -14,13 +19,26 @@ const Question = (props) => {
               return  toast.error("Wrong Answer");
             }
       }
-
+     /////////////////////////////////////////////////////////////////////////////////////////////
      
+
+
+
+
     return (
         <div>
             <div className='border border-info rounded-5 my-5 question-container'>
                 <div>
                     <h3 className='m-5'>{question}</h3>
+                    
+                    {/* Eye icon container */}
+                     <div>
+                          
+
+                     </div>
+
+
+
                 </div>
                 <div>
                      {

@@ -13,7 +13,7 @@ const Navigationbar = () => {
         <div>
             <Navbar bg="dark" expand="lg" variant='dark'>
                     <Container>
-                        <Navbar.Brand href="/" className='web-title text-info fs-2'> Developer-QnA</Navbar.Brand>
+                        <Navbar.Brand href="/" className='web-title text-info fs-2'> <image src="/src/components/Navigationbar/quiz.png"></image> Developer-QnA</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
