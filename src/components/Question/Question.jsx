@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Question.css' ;
 
-/////Hero Eye Icon import
-
+/////FontAwesome Eye Icon import
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye , faEyeSlash } from '@fortawesome/free-solid-svg-icons'
  
 const Question = (props) => {
      const {options, question , correctAnswer }=props.detail;
@@ -21,20 +22,28 @@ const Question = (props) => {
       }
      /////////////////////////////////////////////////////////////////////////////////////////////
      
+     //////Show Answer
 
+     const [isVisible , setVisible] = useState(false) ;
 
+     const showAnswer = (isVisible) => {
+         setVisible(!isVisible);
+     }
+
+     console.log(isVisible);
 
 
     return (
         <div>
             <div className='border border-info rounded-5 my-5 question-container'>
-                <div>
+                <div className='d-flex align-items-center justify-content-evenly'>
                     <h3 className='m-5'>{question}</h3>
                     
                     {/* Eye icon container */}
-                     <div>
-                          
-
+                     <div onClick={ ()=> showAnswer(isVisible) } className="p-3">
+                        {
+                           (isVisible) ? <FontAwesomeIcon icon={faEyeSlash} className="fs-2" title='Hide the Correct Answer'></FontAwesomeIcon> : <FontAwesomeIcon icon={faEye} className="fs-2" title='See the Correct Answer'></FontAwesomeIcon> 
+                        }
                      </div>
 
 
@@ -54,6 +63,8 @@ const Question = (props) => {
                     
                      }
                 </div>
+                {/* Show Correct Answer */}
+                <div className={`text-center bg-success p-4 m-5 fs-4 ${isVisible ? 'd-block' : 'd-none'}`}> {correctAnswer} </div>
             </div>    
         </div>
     );
