@@ -12,7 +12,8 @@ const Question = (props) => {
 
    
      const questionWithoutHTMLTag = question.replace(/(<([^>]+)>)/ig, '');  //// It removes HTML tags from string in JSON API  
-
+    
+       
     
 
 
