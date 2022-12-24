@@ -9,10 +9,11 @@ import { faEye , faEyeSlash } from '@fortawesome/free-solid-svg-icons'
  
 const Question = (props) => {
      const {options, question , correctAnswer }=props.detail;
-
+     
    
      const questionWithoutHTMLTag = question.replace(/(<([^>]+)>)/ig, '');  //// It removes HTML tags from string in JSON API  
-    
+     
+     const questionWithoutnbsp = questionWithoutHTMLTag.replace(/&nbsp;/g, '');  //// It removes &nbsp from the question string
        
     
 
@@ -43,7 +44,7 @@ const Question = (props) => {
         <div>
             <div className='border border-info rounded-5 my-5 question-container'>
                 <div className='d-flex align-items-center justify-content-evenly'>
-                    <h3 className='m-5'>{questionWithoutHTMLTag}</h3>
+                    <h3 className='m-5'>{questionWithoutnbsp}</h3>
                     
                     {/* Eye icon container */}
                      <div onClick={ ()=> showAnswer(isVisible) } className="p-3">
