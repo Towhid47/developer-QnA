@@ -10,6 +10,11 @@ import { faEye , faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 const Question = (props) => {
      const {options, question , correctAnswer }=props.detail;
 
+   
+     const questionWithoutHTMLTag = question.replace(/(<([^>]+)>)/ig, '');  //// It removes HTML tags from string in JSON API  
+
+    
+
 
      ////// The Purpose of optionClicked() Function is to display a Toast while user click the specific option.
      const optionClicked = (option) =>{
@@ -30,14 +35,14 @@ const Question = (props) => {
          setVisible(!isVisible);
      }
 
-     console.log(isVisible);
+
 
 
     return (
         <div>
             <div className='border border-info rounded-5 my-5 question-container'>
                 <div className='d-flex align-items-center justify-content-evenly'>
-                    <h3 className='m-5'>{question}</h3>
+                    <h3 className='m-5'>{questionWithoutHTMLTag}</h3>
                     
                     {/* Eye icon container */}
                      <div onClick={ ()=> showAnswer(isVisible) } className="p-3">
